@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<title></title>
+<script>
+function checkBrackets(r){
+	var braces = 0;
+	
+
+	if(r.length != 0)
+	{
+	
+		for(var i=0; i<r.length; i++)
+		{
+			switch(r[i])
+			{
+				case '(' :
+				++braces;
+				break;
+				
+				case ')':
+				braces--;
+				break;
+			}
+		
+		}
+		if(braces === 0)
+		{
+			console.log("correct");
+		
+		}
+		else if (braces > 0)
+		{
+			console.log(braces + "Brace need to be closed");
+		
+		}
+		else{
+			console.log(braces + "Brace need to be opened");
+		}
+	}
+	else{
+	alert("Enter a expression");
+	
+	}
+
+}
+</script>
+</head>
+<body>
+<input type="text" name="braces" id="demo1"/>
+<br>
+<input type="button" onclick="checkBrackets(demo1.value)" value="Click Me"/>
+</body>
+</html>
